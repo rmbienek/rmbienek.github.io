@@ -47,7 +47,17 @@
 		        
 
 		        var chart = new OrgChart(document.getElementById("tree"), {
+		        	scaleInitial: 0.65,
 		        	template: "myTemplate",
+		        	layout: OrgChart.treeRightOffset,  
+					toolbar: true,      
+				   	enableSearch: false,
+				   	nodeMouseClick: OrgChart.action.none,
+				   	tags: {
+			            "Hide": {
+			                state: OrgChart.COLLAPSE
+			            }
+			        },
 		        	nodeBinding: {
 						field_0: "name",
 		                field_1: "description"
