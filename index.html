@@ -11,18 +11,318 @@
 		<style>
 
 			html, body{
-			  width: 100%;
-			  height: 100%;
-			  padding: 0;
-			  margin:0;
-			  overflow: hidden;
-			  font-family: Helvetica;
+				margin:0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background: whitesmoke;
+			  	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+				font-size: 16px;
+				font-style: normal;
+				font-variant: normal;
+				font-weight: 700;
+				line-height: 15px;
+
+				
 			}
 
+			 
+
+			section div div a{
+				margin: 0px 10px 0px 0px;
+				padding: 0px 10px 0px 10px;
+				border: 1px #aeaeae solid;
+				font-size: 12px;	
+
+			}
+
+			section div div{
+				padding: 0px 0px 5px 0px;
+				float: left;
+			}
+
+
+			#legend{
+				margin: 10px 0px 10px 10px;
+				padding: 0px 0px 0px 0px;
+				float: left;	
+
+			}
+
+
+			/*partial*/
+			.node.Paraprofessional rect {
+			    fill: #A8E4FA;
+			}
+
+			.node.DirectorLevel rect {
+			    fill: #EBE3F2;
+			}
+
+			.node.SeniorExecutiveStaffLevel rect {
+			    fill: #BAC8D5;
+			}
+
+			.node.CoordinatorMgrEngineersAnalysts rect {
+			    fill: #E4F1DC;
+			}
+
+			.node.CoordinatorMgrAsstDirectorLevel rect {
+			    fill: #E4F1DC;
+			}
+
+			.node.ExecutiveLevel rect {
+				fill: #e8bda0;
+			}
+
+			.node.ExternalAdvisors rect {
+				fill: #ebe3f2;
+			}
+
+			.node.SupportServices rect {
+				fill: #abc8e2;
+			}
+			.node.CriminalInvestigations rect {
+				fill: #f8cbad;
+			}
+
+			.node.EmergencyManagement rect {
+				fill: #e69999;
+			}
+
+			.node.Operations rect {
+				fill: #ddedd2;
+			}
+
+			.node.ProfessionalStaff rect {
+				fill: #ebe2f2;
+			}
+
+			.node.SeniorStaffLevel rect {
+				fill: #e1ecf7;
+			}
+
+			.node.Hourly rect {
+				fill: #ffff4c;
+			}
+
+
+
 			#tree{
-			  width:100%;
+			  
+			  width: -webkit-calc(100%);
 			  height:100%;
 			}
+
+			#legend{
+				width: -webkit-calc(100%);
+			}
+
+			#HeaderDiv {
+				width: 1920px;
+				display: block;
+
+				
+			}
+
+			#HeaderImage {
+			    height:55px;    
+			    min-width: 180px;
+			    
+			    font-variant: normal;
+			    background-color:#E0E0E0;
+			    text-align:center;
+
+			    position: fixed;
+			    overflow-x: hidden;
+			    z-index: 1;
+			    top: 0;
+			  	left: 0;
+			  	
+			    
+			}
+
+			#headerText {
+			    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+				font-size: 30px;
+				font-style: normal;
+				font-variant: normal;
+				font-weight: 800;
+				padding-left: 20px;
+
+				line-height: 55px;
+			    margin:auto;
+
+			    height:55px; 
+			    
+			    color:#000000;
+			    
+			    background-color:#E0E0E0; 
+			    text-align:justify;
+			    
+				width: 100%;
+
+			    position: fixed;
+			    overflow-x: auto;
+			    z-index: 1;
+			    top: 0;
+			  	left: 180px;
+			  	
+			  }
+
+
+			aside {
+				background-color:#76727A;
+			    width:180px; 
+				height: -webkit-calc(100% - 65px);
+			    padding:0px;
+			    text-align:left;
+			    position: fixed;
+			    overflow-x: hidden;
+			    z-index: 1;
+			    top: 55px;
+			  	left: 0;
+
+			  	border-top: 1px solid black;
+			}	
+
+			section {
+			    width: -webkit-calc(100% - 180px);
+			    height: -webkit-calc(100% - 55px);
+			    
+			    position: fixed;
+			    overflow-x: scroll;
+			    z-index: 1;
+			    top: 55px;
+			  	left: 180px;
+
+			  	border-top: 1px solid black;
+			}
+
+
+			ul {
+				list-style:none;
+				margin:0; 
+				padding:0;
+				width:180px;
+				margin:0 auto;
+				font-size: 12px;
+				
+			}
+
+			ul li label {
+				background: #575e63; /* fallback colour */
+				
+				border-bottom:1px solid #E0E0E0;
+				color: #fff;
+				text-shadow: 0 1px 1px #000;
+				letter-spacing: 0.09em;
+			    background:#76727A ;
+
+			}
+
+			ul li input[type='checkbox'] {
+				display: none;
+			}
+
+			ul li label {
+				display:block;
+				padding:6px;
+				width:180px;
+			}
+
+			ul li i {
+				font-size:18px;
+				vertical-align: middle;
+				width:20px;
+				display:inline-block;
+			}
+
+			ul li label:hover {
+				background: #566f82; /* fallback colour */
+				background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#76727A), to(#1F77B4));
+				background: -webkit-linear-gradient(right, #76727A, #1F77B4);
+				background: -moz-linear-gradient(right, #76727A, #1F77B4);
+				background: -ms-linear-gradient(right, #76727A, #1F77B4);
+				background: -o-linear-gradient(right, #76727A, #1F77B4);
+			    cursor:pointer;
+			}
+
+			ul li label:hover span {
+				background:#3e505e;
+			}
+
+
+			ul li input[type='checkbox']:checked ~ .options {
+				height: auto;
+				display:block;
+				min-height:20px;
+				max-height:700px;
+			}
+
+			ul ul {
+				background:#E0E0E0; margin:0; padding:0;
+				
+			}
+
+			ul ul li {
+			    font-size: 12px;
+				display:block;
+				padding:6px 12px;
+				color:#000;
+				text-decoration:none;
+			    border-bottom:1px solid #ccc;
+			}
+
+			ul ul li:hover {
+			    background: #566f82; /* fallback colour */
+				background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E0E0E0), to(#1F77B4));
+				background: -webkit-linear-gradient(right, #E0E0E0, #1F77B4);
+				background: -moz-linear-gradient(right, #E0E0E0, #1F77B4);
+				background: -ms-linear-gradient(right, #E0E0E0, #1F77B4);
+				background: -o-linear-gradient(right, #E0E0E0, #1F77B4);
+			    cursor:pointer;
+			}
+
+
+
+			/*ul ul li:first-child {
+				padding-top:6px;
+			}*/
+
+			/*ul ul li:last-child {
+				padding-bottom:6px; border:0;
+			}*/
+
+			.options {
+				height: 0;
+				display: block;
+				overflow: hidden;
+				font-size: 10px;
+			}
+
+			ul ul li.seledtedValue{
+			    background: #566f82; /* fallback colour */
+				background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E0E0E0), to(#1F77B4));
+				background: -webkit-linear-gradient(right, #E0E0E0, #1F77B4);
+				background: -moz-linear-gradient(right, #E0E0E0, #1F77B4);
+				background: -ms-linear-gradient(right, #E0E0E0, #1F77B4);
+				background: -o-linear-gradient(right, #E0E0E0, #1F77B4);
+			    cursor:pointer;
+			}
+
+			ul li label.seledtedValue {
+				background: #566f82; /* fallback colour */
+				background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#76727A), to(#1F77B4));
+				background: -webkit-linear-gradient(right, #76727A, #1F77B4);
+				background: -moz-linear-gradient(right, #76727A, #1F77B4);
+				background: -ms-linear-gradient(right, #76727A, #1F77B4);
+				background: -o-linear-gradient(right, #76727A, #1F77B4);
+			    cursor:pointer;
+			}
+
+
 
 		</style>
 
