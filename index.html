@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+  	<head>
+    	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    	<title>Org Chart Example</title>
+		
+		<script src="https://balkangraph.com/js/latest/OrgChart.js"></script>	
+
+		<style>
+
+			html, body{
+			  width: 100%;
+			  height: 100%;
+			  padding: 0;
+			  margin:0;
+			  overflow: hidden;
+			  font-family: Helvetica;
+			}
+
+			#tree{
+			  width:100%;
+			  height:100%;
+			}
+
+		</style>
+
+
+		
+		
+		
+
+		
+
+	</head>	
+	
+ 	
+	<body>	
+		<div>Test</div>
+		<div id="tree"/>
+
+		<script type="text/javascript">
+
+				OrgChart.templates.myTemplate = Object.assign({}, OrgChart.templates.olivia);
+		        OrgChart.templates.myTemplate.field_0 = '<text width="230" text-overflow="ellipsis"  style="font-size: 24px;" fill="#757575" x="125" y="100" text-anchor="middle">{val}</text>';
+		        OrgChart.templates.myTemplate.field_1 = '<text width="230" text-overflow="multiline" style="font-size: 16px;" fill="#757575" x="125" y="30" text-anchor="middle">{val}</text>';
+		        
+		        var chart = new OrgChart(document.getElementById("tree"), {
+		        	template: "myTemplate",
+		        	nodeBinding: {
+						field_0: "name",
+		                field_1: "description"
+		            },
+		            nodes: [
+		                { id: 1, name: "Amber McKenzie", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+		                { id: 2, pid: 1, name: "Christopher Cleveland", description: " Suspendisse vitae volutpat tortor. Integer vehicula quis felis quis tempor." },
+		                { id: 3, pid: 1, name: "Montgomery Remington", description: "Vivamus posuere quis ligula quis blandit." }
+		            ]
+		        });
+
+		</script>
+
+	</body>
+	
+</html>
